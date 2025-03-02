@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'theNeptune | Innovative Software Development',
-  description: 'We build cutting-edge software solutions for businesses of all sizes. From web applications to mobile apps, we deliver quality software that drives growth.',
+  description: 'We build Cutting Edge Software that Drives Innovation and Growth for Businesses.From web applications to Enterprise solutions, We Deliver Excellence.',
 };
 
 export default function RootLayout({

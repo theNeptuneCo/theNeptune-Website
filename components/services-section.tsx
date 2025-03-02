@@ -58,11 +58,12 @@ export function ServicesSection() {
             We offer a comprehensive range of software development services to help your business thrive in the digital landscape.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              style={{ height: '100%' }}
+              key={index}
               className="border-border/40 bg-card/60 backdrop-blur-sm transition-all duration-300 hover:bg-gradient-to-br hover:from-primary/10 hover:to-primary/5 hover:border-primary/50 hover:shadow-lg"
             >
               <CardHeader>

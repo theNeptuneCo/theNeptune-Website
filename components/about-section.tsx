@@ -14,15 +14,15 @@ export function AboutSection() {
               className="object-cover"
             />
           </div>
-          
+
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">About theNeptune</h2>
               <p className="text-muted-foreground">
-                Founded in 2015, theNeptune has grown from a small startup to a leading software development company. We're passionate about creating innovative solutions that help businesses succeed in an increasingly digital world.
+                Founded in 2020, theNeptune has grown from a small freelancing group to a leading software development agency. We're passionate about creating innovative solutions that help businesses succeed in an increasingly digital world.
               </p>
             </div>
-            
+
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -31,7 +31,7 @@ export function AboutSection() {
                   <p className="text-muted-foreground">Our team consists of experienced developers, designers, and project managers who are experts in their fields.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
@@ -39,7 +39,7 @@ export function AboutSection() {
                   <p className="text-muted-foreground">We follow agile development practices to ensure flexibility, transparency, and continuous improvement throughout the project lifecycle.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
@@ -47,7 +47,7 @@ export function AboutSection() {
                   <p className="text-muted-foreground">We prioritize understanding your business needs and goals to deliver solutions that drive real value and results.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                 <div>
