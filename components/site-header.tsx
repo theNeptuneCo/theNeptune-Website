@@ -20,7 +20,9 @@ export function SiteHeader() {
       <div style={{}} className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <Code className="h-6 w-6 text-primary" />
+            {/* <Code className="h-6 w-6 text-primary" /> */}
+            <img src="https://avatars.githubusercontent.com/u/195533683?s=400&u=6e8e40e634c33ff0f004bf11488cd9087e3b11ff&v=4"
+              style={{ height: 50, width: 50, marginRight: -12 }} />
             <span className="font-bold text-xl">theNeptune</span>
           </Link>
         </div>

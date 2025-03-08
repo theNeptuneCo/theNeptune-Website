@@ -12,7 +12,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <Code className="h-6 w-6 text-primary" />
+              <img src="https://avatars.githubusercontent.com/u/195533683?s=400&u=6e8e40e634c33ff0f004bf11488cd9087e3b11ff&v=4"
+                style={{ marginLeft: -12, height: 50, width: 50, marginRight: -12 }} />
               <span className="font-bold text-xl">theNeptune</span>
             </div>
             <p className="text-muted-foreground">
