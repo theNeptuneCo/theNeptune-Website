@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Send, Clock, Smartphone, Globe, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,11 +14,12 @@ export function ContactSection() {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: ""
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
@@ -38,103 +39,217 @@ export function ContactSection() {
         name: "",
         email: "",
         phone: "",
+        service: "",
         message: ""
       })
     }, 1500)
   }
 
+  const services = [
+    {
+      icon: <Smartphone className="h-6 w-6 text-primary" />,
+      title: "Mobile App Development",
+      description: "iOS, Android, and cross-platform solutions"
+    },
+    {
+      icon: <Globe className="h-6 w-6 text-primary" />,
+      title: "Web Development",
+      description: "Responsive websites and web applications"
+    },
+    {
+      icon: <Sparkles className="h-6 w-6 text-primary" />,
+      title: "Generative AI",
+      description: "Custom AI solutions and integrations"
+    }
+  ]
+
+  const contactInfo = [
+    {
+      icon: <MapPin className="h-6 w-6 text-primary" />,
+      title: "Our Location",
+      details: ["123 Tech Boulevard", "Innovation District", "San Francisco, CA 94105"]
+    },
+    {
+      icon: <Mail className="h-6 w-6 text-primary" />,
+      title: "Email Us",
+      details: ["info@theneptune.co", "support@theneptune.co"]
+    },
+    {
+      icon: <Phone className="h-6 w-6 text-primary" />,
+      title: "Call Us",
+      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"]
+    },
+    {
+      icon: <Clock className="h-6 w-6 text-primary" />,
+      title: "Business Hours",
+      details: ["Mon - Fri: 9AM - 6PM", "Sat: 10AM - 4PM"]
+    }
+  ]
+
   return (
-    <section id="contact" className="py-20 bg-muted/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Get In Touch</h2>
-          <p className="text-muted-foreground max-w-[700px]">
-            Have a project in mind or want to learn more about our services? We'd love to hear from you.
+    <section id="contact" className="section-padding bg-gradient-to-br from-muted/30 via-background to-muted/20">
+      <div className="container">
+        <div className="flex flex-col items-center text-center space-y-6 mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+            Get In Touch
+          </div>
+          <h2 className="heading-responsive font-bold tracking-tight">
+            Let's Build{" "}
+            <span className="gradient-text">Together</span>
+          </h2>
+          <p className="text-responsive text-muted-foreground max-w-3xl">
+            Ready to start your mobile app or web development project? Let's discuss how we can bring your ideas to life with our expertise in mobile apps, web development, and AI solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium text-lg">Our Location</h3>
-                <p className="text-muted-foreground">123 Tech Boulevard, Innovation District, San Francisco, CA 94105</p>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Contact Information */}
+          <div className="space-y-8 animate-slide-up">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Our Services</h3>
+              <p className="text-muted-foreground">
+                Choose from our core services or let us know about your specific requirements.
+              </p>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium text-lg">Email Us</h3>
-                <p className="text-muted-foreground">info@theneptune.co</p>
-                <p className="text-muted-foreground">support@theneptune.co</p>
-              </div>
+            <div className="space-y-4">
+              {services.map((service, index) => (
+                <div key={index} className="group p-4 rounded-xl bg-muted/30 border border-border/50 hover:bg-muted/50 hover:border-primary/30 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                      {service.icon}
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h4>
+                      <p className="text-muted-foreground text-sm">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Phone className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium text-lg">Call Us</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                <p className="text-muted-foreground">+1 (555) 987-6543</p>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="group p-4 rounded-xl bg-muted/30 border border-border/50 hover:bg-muted/50 hover:border-primary/30 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                        {info.icon}
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                          {info.title}
+                        </h4>
+                        <div className="space-y-1">
+                          {info.details.map((detail, detailIndex) => (
+                            <p key={detailIndex} className="text-muted-foreground text-sm">
+                              {detail}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Contact Form */}
+          <div className="animate-slide-up">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">Start Your Project</h3>
+                <p className="text-muted-foreground">
+                  Tell us about your project and we'll get back to you within 24 hours.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Input
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="h-12 border-2 focus:border-primary transition-colors duration-200"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="h-12 border-2 focus:border-primary transition-colors duration-200"
+                  />
+                </div>
+              </div>
+
               <div className="space-y-2">
                 <Input
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
+                  name="phone"
+                  placeholder="Phone Number (Optional)"
+                  value={formData.phone}
                   onChange={handleChange}
+                  className="h-12 border-2 focus:border-primary transition-colors duration-200"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full h-12 px-3 border-2 border-border rounded-md bg-background focus:border-primary transition-colors duration-200"
+                  required
+                >
+                  <option value="">Select a Service</option>
+                  <option value="mobile-app">Mobile App Development</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="generative-ai">Generative AI</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Textarea
+                  name="message"
+                  placeholder="Tell us about your project..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="min-h-[150px] border-2 focus:border-primary transition-colors duration-200 resize-none"
                   required
                 />
               </div>
-              <div className="space-y-2">
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
 
-            <div className="space-y-2">
-              <Input
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                className="min-h-[150px]"
-                required
-              />
-            </div>
-
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
-          </form>
+              <Button 
+                type="submit" 
+                className="w-full btn-primary h-12 text-lg" 
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                    Sending...
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    Send Message
+                    <Send className="h-5 w-5" />
+                  </div>
+                )}
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'theNeptune | Innovative Software Development',
-  description: 'We build Cutting Edge Software that Drives Innovation and Growth for Businesses.From web applications to Enterprise solutions, We Deliver Excellence.',
+  title: 'theNeptune | Mobile App & Web Development + AI Solutions',
+  description: 'Specializing in mobile app development, web development, and Generative AI solutions. We create innovative digital experiences that drive business growth.',
 };
 
 export default function RootLayout({

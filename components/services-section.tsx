@@ -1,10 +1,8 @@
 import {
-  Code2,
   Smartphone,
   Globe,
-  Database,
-  Cloud,
-  Shield
+  Sparkles,
+  ArrowRight
 } from "lucide-react"
 
 import {
@@ -15,66 +13,106 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import { cn } from "@/lib/utils"
+
 const services = [
   {
-    icon: <Code2 className="h-10 w-10 text-primary" />,
-    title: "Custom Software Development",
-    description: "Tailored software solutions designed to meet your specific business needs and challenges."
-  },
-  {
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
+    icon: <Smartphone className="h-12 w-12 text-primary" />,
     title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications that deliver exceptional user experiences."
+    description: "Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android platforms.",
+    features: ["iOS & Android", "React Native", "Flutter", "Performance Optimized"],
+    priority: "primary"
   },
   {
-    icon: <Globe className="h-10 w-10 text-primary" />,
+    icon: <Globe className="h-12 w-12 text-primary" />,
     title: "Web Development",
-    description: "Responsive, high-performance websites and web applications built with cutting-edge technologies."
+    description: "Responsive, high-performance websites and web applications built with cutting-edge technologies and modern frameworks.",
+    features: ["Responsive Design", "React/Next.js", "SEO Optimized", "Fast Loading"],
+    priority: "primary"
   },
   {
-    icon: <Database className="h-10 w-10 text-primary" />,
-    title: "Database Solutions",
-    description: "Robust database design, optimization, and management for efficient data handling."
-  },
-  {
-    icon: <Cloud className="h-10 w-10 text-primary" />,
-    title: "Cloud Services",
-    description: "Scalable cloud infrastructure and migration services to enhance your business capabilities."
-  },
-  {
-    icon: <Shield className="h-10 w-10 text-primary" />,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your software and data from threats."
+    icon: <Sparkles className="h-12 w-12 text-primary" />,
+    title: "Generative AI Solutions",
+    description: "Custom AI solutions that leverage the latest in machine learning and generative technologies to enhance your business.",
+    features: ["Custom AI Models", "ChatGPT Integration", "Image Generation", "Process Automation"],
+    priority: "secondary"
   }
 ]
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-muted/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Our Services</h2>
-          <p className="text-muted-foreground max-w-[700px]">
-            We offer a comprehensive range of software development services to help your business thrive in the digital landscape.
+    <section id="services" className="section-padding bg-gradient-to-br from-muted/30 via-background to-muted/20">
+      <div className="container">
+        <div className="flex flex-col items-center text-center space-y-6 mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+            Our Services
+          </div>
+          <h2 className="heading-responsive font-bold tracking-tight">
+            What We{" "}
+            <span className="gradient-text">Specialize In</span>
+          </h2>
+          <p className="text-responsive text-muted-foreground max-w-3xl">
+            We focus on three core areas: mobile app development, web development, and Generative AI solutions. 
+            Each service is designed to deliver exceptional results and drive your business forward.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card
-              style={{ height: '100%' }}
               key={index}
-              className="border-border/40 bg-card/60 backdrop-blur-sm transition-all duration-300 hover:bg-gradient-to-br hover:from-primary/10 hover:to-primary/5 hover:border-primary/50 hover:shadow-lg"
+              className={cn(
+                "group card-hover glass border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden relative",
+                service.priority === "primary" ? "lg:col-span-1" : "lg:col-span-1"
+              )}
             >
-              <CardHeader>
-                <div className="mb-4">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <CardHeader className="relative text-center">
+                <div className="mb-6 p-4 rounded-2xl bg-primary/10 w-fit mx-auto group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{service.description}</CardDescription>
+              
+              <CardContent className="relative space-y-6 text-center">
+                <CardDescription className="text-base leading-relaxed">
+                  {service.description}
+                </CardDescription>
+                
+                {/* Features list */}
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Learn more link */}
+                <div className="pt-4">
+                  <div className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all duration-300">
+                    Learn More
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center animate-slide-up">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+            Ready to build something amazing?
+          </div>
+          <p className="mt-4 text-muted-foreground">
+            Let's discuss your project and create the perfect solution for your business.
+          </p>
         </div>
       </div>
     </section>
