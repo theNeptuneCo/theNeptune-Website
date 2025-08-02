@@ -16,34 +16,17 @@ export function HeroSection() {
 
       <div className="container relative z-10">
         <div className="flex flex-col items-center text-center space-y-12">
-          {/* Logo Animation */}
-          <div className="animate-fade-in">
-            <div className="relative w-24 h-24 mx-auto mb-8 group">
-              <Image
-                src="https://github.com/theNeptuneCo/theNeptune-Website/blob/main/assets/images/logo.png?raw=true"
-                alt="theNeptune Logo"
-                fill
-                className="object-contain transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 rounded-full bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
-          </div>
 
           {/* Main Content */}
           <div className="space-y-8 max-w-4xl animate-slide-up">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium font-sans">
-              <Sparkles className="h-4 w-4" />
-              Mobile-First Development
-            </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="hero-heading">
-                Mobile Apps &{" "}
-                <span className="gradient-text">Web Solutions</span>
+                Taming the {" "}
+                <span className="gradient-text">Digital Tides</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
+              <p className="text-xl md:text-1xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
                 We specialize in mobile app development, web development, and Generative AI solutions. 
                 Creating innovative digital experiences that drive business growth.
               </p>
