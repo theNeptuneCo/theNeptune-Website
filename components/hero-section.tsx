@@ -20,7 +20,7 @@ export function HeroSection() {
           <div className="animate-fade-in">
             <div className="relative w-24 h-24 mx-auto mb-8 group">
               <Image
-                src="/assets/images/logo.png"
+                src="https://github.com/theNeptuneCo/theNeptune-Website/blob/main/assets/images/logo.png?raw=true"
                 alt="theNeptune Logo"
                 fill
                 className="object-contain transition-transform duration-700 group-hover:scale-110"
@@ -32,18 +32,18 @@ export function HeroSection() {
           {/* Main Content */}
           <div className="space-y-8 max-w-4xl animate-slide-up">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium font-sans">
               <Sparkles className="h-4 w-4" />
               Mobile-First Development
             </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+              <h1 className="hero-heading">
                 Mobile Apps &{" "}
                 <span className="gradient-text">Web Solutions</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
                 We specialize in mobile app development, web development, and Generative AI solutions. 
                 Creating innovative digital experiences that drive business growth.
               </p>
@@ -53,15 +53,15 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 border border-primary/20">
                 <Smartphone className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Mobile Apps</span>
+                <span className="text-sm font-medium font-sans">Mobile Apps</span>
               </div>
               <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 border border-primary/20">
                 <Globe className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Web Development</span>
+                <span className="text-sm font-medium font-sans">Web Development</span>
               </div>
               <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 border border-primary/20">
                 <Sparkles className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Generative AI</span>
+                <span className="text-sm font-medium font-sans">Generative AI</span>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export function HeroSection() {
                   Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium">
                 <Link href="#portfolio">
                   View Our Work
                 </Link>

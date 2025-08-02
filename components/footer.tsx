@@ -13,17 +13,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-0">
               <div className="relative w-12 h-12">
                 <Image
-                  src="/assets/images/logo.png"
+                  src="https://github.com/theNeptuneCo/theNeptune-Website/blob/main/assets/images/logo.png?raw=true"
                   alt="theNeptune Logo"
                   fill
                   className="object-contain"
                 />
                 <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              <span
+               className="font-bold text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                 theNeptune
               </span>
             </div>

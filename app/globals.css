@@ -77,13 +77,21 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   
-  /* Enhanced typography */
+  /* Enhanced typography with sexy fonts */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-heading font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply font-display;
+  }
+  
+  h2, h3 {
+    @apply font-heading;
   }
   
   /* Smooth scrolling */
@@ -133,11 +141,11 @@
   
   /* Enhanced button styles */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 transform hover:scale-105 active:scale-95;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 transform hover:scale-105 active:scale-95 font-medium;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-200 transform hover:scale-105 active:scale-95;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-200 transform hover:scale-105 active:scale-95 font-medium;
   }
   
   /* Card hover effects */
@@ -150,13 +158,33 @@
     @apply py-16 sm:py-20 lg:py-24;
   }
   
-  /* Responsive text utilities */
+  /* Responsive text utilities with sexy fonts */
   .text-responsive {
-    @apply text-base sm:text-lg lg:text-xl;
+    @apply text-base sm:text-lg lg:text-xl font-body;
   }
   
   .heading-responsive {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display;
+  }
+  
+  .hero-heading {
+    @apply text-5xl md:text-7xl font-display font-bold tracking-tight leading-tight;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight;
+  }
+  
+  .card-title {
+    @apply font-heading font-semibold;
+  }
+  
+  .nav-text {
+    @apply font-sans font-medium;
+  }
+  
+  .body-text {
+    @apply font-body;
   }
   
   /* Animation utilities */

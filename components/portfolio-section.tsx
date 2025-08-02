@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRight, ExternalLink, Star, Smartphone, Globe } from "lucide-react"
+import { ArrowUpRight, ExternalLink, Smartphone, Globe } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -20,7 +20,6 @@ const projects = [
     description: "A feature-rich mobile shopping application with personalized recommendations, seamless payment processing, and real-time inventory management.",
     image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     tags: ["React Native", "Firebase", "Payment Gateway", "Push Notifications"],
-    rating: 5,
     category: "Mobile App",
     icon: <Smartphone className="h-4 w-4" />
   },
@@ -29,7 +28,6 @@ const projects = [
     description: "A comprehensive web platform for healthcare providers to manage patient records, appointments, and billing with AI-powered insights.",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     tags: ["Next.js", "TypeScript", "AI Integration", "HIPAA Compliant"],
-    rating: 5,
     category: "Web App",
     icon: <Globe className="h-4 w-4" />
   },
@@ -38,7 +36,6 @@ const projects = [
     description: "A cross-platform fitness app with workout tracking, progress analytics, and social features to keep users motivated and engaged.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     tags: ["Flutter", "HealthKit", "Social Features", "Analytics"],
-    rating: 5,
     category: "Mobile App",
     icon: <Smartphone className="h-4 w-4" />
   }
@@ -73,12 +70,6 @@ export function PortfolioSection() {
                   {project.icon}
                   {project.category}
                 </Badge>
-              </div>
-
-              {/* Rating */}
-              <div className="absolute top-4 right-4 z-10 flex items-center gap-1 bg-background/80 backdrop-blur-sm px-2 py-1 rounded-full">
-                <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                <span className="text-xs font-medium">{project.rating}.0</span>
               </div>
 
               {/* Image */}

@@ -20,22 +20,19 @@ const services = [
     icon: <Smartphone className="h-12 w-12 text-primary" />,
     title: "Mobile App Development",
     description: "Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android platforms.",
-    features: ["iOS & Android", "React Native", "Flutter", "Performance Optimized"],
-    priority: "primary"
+    features: ["iOS & Android", "React Native", "Flutter", "Performance Optimized"]
   },
   {
     icon: <Globe className="h-12 w-12 text-primary" />,
     title: "Web Development",
     description: "Responsive, high-performance websites and web applications built with cutting-edge technologies and modern frameworks.",
-    features: ["Responsive Design", "React/Next.js", "SEO Optimized", "Fast Loading"],
-    priority: "primary"
+    features: ["Responsive Design", "React/Next.js", "SEO Optimized", "Fast Loading"]
   },
   {
     icon: <Sparkles className="h-12 w-12 text-primary" />,
     title: "Generative AI Solutions",
     description: "Custom AI solutions that leverage the latest in machine learning and generative technologies to enhance your business.",
-    features: ["Custom AI Models", "ChatGPT Integration", "Image Generation", "Process Automation"],
-    priority: "secondary"
+    features: ["Custom AI Models", "ChatGPT Integration", "Image Generation", "Process Automation"]
   }
 ]
 
@@ -44,14 +41,14 @@ export function ServicesSection() {
     <section id="services" className="section-padding bg-gradient-to-br from-muted/30 via-background to-muted/20">
       <div className="container">
         <div className="flex flex-col items-center text-center space-y-6 mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium font-sans">
             Our Services
           </div>
-          <h2 className="heading-responsive font-bold tracking-tight">
+          <h2 className="section-heading">
             What We{" "}
             <span className="gradient-text">Specialize In</span>
           </h2>
-          <p className="text-responsive text-muted-foreground max-w-3xl">
+          <p className="text-responsive text-muted-foreground max-w-3xl font-body">
             We focus on three core areas: mobile app development, web development, and Generative AI solutions. 
             Each service is designed to deliver exceptional results and drive your business forward.
           </p>
@@ -63,7 +60,7 @@ export function ServicesSection() {
               key={index}
               className={cn(
                 "group card-hover glass border-border/40 bg-card/60 backdrop-blur-sm overflow-hidden relative",
-                service.priority === "primary" ? "lg:col-span-1" : "lg:col-span-1"
+                "lg:col-span-1"
               )}
             >
               {/* Hover overlay */}
@@ -73,20 +70,20 @@ export function ServicesSection() {
                 <div className="mb-6 p-4 rounded-2xl bg-primary/10 w-fit mx-auto group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300 font-heading">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               
               <CardContent className="relative space-y-6 text-center">
-                <CardDescription className="text-base leading-relaxed">
+                <CardDescription className="text-base leading-relaxed font-body">
                   {service.description}
                 </CardDescription>
                 
                 {/* Features list */}
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-muted-foreground font-sans">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
                       {feature}
                     </div>
@@ -95,7 +92,7 @@ export function ServicesSection() {
                 
                 {/* Learn more link */}
                 <div className="pt-4">
-                  <div className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 text-primary text-sm font-medium font-sans group-hover:gap-3 transition-all duration-300">
                     Learn More
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -107,10 +104,10 @@ export function ServicesSection() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium font-sans">
             Ready to build something amazing?
           </div>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-muted-foreground font-body">
             Let's discuss your project and create the perfect solution for your business.
           </p>
         </div>

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Quote, Star, CheckCircle } from "lucide-react"
+import { Quote, CheckCircle } from "lucide-react"
 
 import {
   Card,
@@ -13,7 +13,6 @@ const testimonials = [
     author: "Sarah Johnson",
     position: "CTO, FinTech Innovations",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    rating: 5,
     company: "FinTech Innovations"
   },
   {
@@ -21,7 +20,6 @@ const testimonials = [
     author: "Michael Chen",
     position: "CEO, Global Logistics",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    rating: 5,
     company: "Global Logistics"
   },
   {
@@ -29,7 +27,6 @@ const testimonials = [
     author: "Emily Rodriguez",
     position: "Product Manager, HealthPlus",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    rating: 5,
     company: "HealthPlus"
   }
 ]
@@ -65,13 +62,6 @@ export function TestimonialsSection() {
               </div>
 
               <CardContent className="pt-8 pb-6">
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-
                 {/* Quote */}
                 <blockquote className="text-muted-foreground leading-relaxed mb-6">
                   "{testimonial.quote}"
