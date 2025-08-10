@@ -233,16 +233,16 @@ export function ContactSection() {
 
               <Button 
                 type="submit" 
-                className="w-full btn-primary h-12 text-lg text-primary-foreground" 
+                className="w-full btn-primary h-12 text-sm font-semibold text-white" 
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-white">
                     <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
                     Sending...
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-white">
                     Send Message
                     <Send className="h-5 w-5" />
                   </div>
