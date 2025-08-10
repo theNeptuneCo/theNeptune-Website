@@ -94,11 +94,11 @@ export function ContactSection() {
             Get In Touch
           </div>
           <h2 className="heading-responsive font-bold tracking-tight">
-            Let's Build{" "}
+            Let&apos;s Build{" "}
             <span className="gradient-text">Together</span>
           </h2>
           <p className="text-responsive text-description max-w-3xl">
-            Ready to start your mobile app or web development project? Let's discuss how we can bring your ideas to life with our expertise in mobile apps, web development, and AI solutions.
+            Ready to start your mobile app or web development project? Let&apos;s discuss how we can bring your ideas to life with our expertise in mobile apps, web development, and AI solutions.
           </p>
         </div>
 
@@ -166,7 +166,7 @@ export function ContactSection() {
                 <div className="space-y-4 text-center">
                   <h3 className="text-2xl font-bold">Start Your Project</h3>
                   <p className="text-description">
-                    Tell us about your project and we'll get back to you within 24 hours.
+                    Tell us about your project and we&apos;ll get back to you within 24 hours.
                   </p>
                 </div>
 
@@ -209,7 +209,7 @@ export function ContactSection() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full h-12 px-3 border-2 border-border rounded-md bg-background focus:border-primary transition-colors duration-200"
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 >
                   <option value="">Select a Service</option>
@@ -233,7 +233,7 @@ export function ContactSection() {
 
               <Button 
                 type="submit" 
-                className="w-full btn-primary h-12 text-lg" 
+                className="w-full btn-primary h-12 text-lg text-primary-foreground" 
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
