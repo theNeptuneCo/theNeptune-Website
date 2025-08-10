@@ -28,7 +28,7 @@ export function Footer() {
                 theNeptune
               </span>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-description leading-relaxed">
               Specializing in mobile app development, web development, and Generative AI solutions. 
               Creating innovative digital experiences that drive business growth.
             </p>
@@ -112,7 +112,7 @@ export function Footer() {
           {/* Newsletter */}
           <div className="space-y-6">
             <h3 className="font-semibold text-lg">Stay Updated</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-description leading-relaxed">
               Subscribe to our newsletter for the latest in mobile app development, web development, and AI trends.
             </p>
             <div className="space-y-3">

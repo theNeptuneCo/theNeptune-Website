@@ -43,7 +43,7 @@ export function TestimonialsSection() {
             What Our{" "}
             <span className="gradient-text">Clients Say</span>
           </h2>
-          <p className="text-responsive text-muted-foreground max-w-3xl">
+          <p className="text-responsive text-description max-w-2xl">
             Don't just take our word for it. Here's what our clients have to say about working with theNeptune.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
 
               <CardContent className="pt-8 pb-6">
                 {/* Quote */}
-                <blockquote className="text-muted-foreground leading-relaxed mb-6">
+                <blockquote className="text-description leading-relaxed mb-6">
                   "{testimonial.quote}"
                 </blockquote>
 
@@ -87,7 +87,7 @@ export function TestimonialsSection() {
                   <p className="font-semibold text-sm group-hover:text-primary transition-colors duration-300">
                     {testimonial.author}
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-muted-enhanced">
                     {testimonial.position}
                   </p>
                 </div>
@@ -100,19 +100,19 @@ export function TestimonialsSection() {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up">
           <div className="text-center">
             <div className="text-3xl font-bold gradient-text mb-2">100%</div>
-            <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+            <div className="text-sm text-muted-enhanced">Client Satisfaction</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold gradient-text mb-2">50+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
+            <div className="text-sm text-muted-enhanced">Happy Clients</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold gradient-text mb-2">5.0</div>
-            <div className="text-sm text-muted-foreground">Average Rating</div>
+            <div className="text-sm text-muted-enhanced">Average Rating</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
-            <div className="text-sm text-muted-foreground">Support Available</div>
+            <div className="text-sm text-muted-enhanced">Support Available</div>
           </div>
         </div>
       </div>

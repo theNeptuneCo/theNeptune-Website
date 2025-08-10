@@ -53,7 +53,7 @@ export function PortfolioSection() {
             Featured{" "}
             <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-responsive text-muted-foreground max-w-3xl">
+          <p className="text-responsive text-description max-w-2xl">
             Explore our latest mobile app and web development projects. Each project showcases our expertise in creating innovative digital solutions.
           </p>
         </div>
@@ -91,7 +91,7 @@ export function PortfolioSection() {
               </CardHeader>
 
               <CardContent className="relative space-y-4">
-                <CardDescription className="text-base leading-relaxed">
+                <CardDescription className="text-base leading-relaxed text-description">
                   {project.description}
                 </CardDescription>
                 <div className="flex flex-wrap gap-2">

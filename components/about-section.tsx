@@ -57,7 +57,7 @@ export function AboutSection() {
                 About{" "}
                 <span className="gradient-text">theNeptune</span>
               </h2>
-              <p className="text-responsive text-muted-foreground leading-relaxed">
+              <p className="text-responsive text-description leading-relaxed">
                 Founded in 2020, theNeptune specializes in mobile app development, web development, and Generative AI solutions. 
                 We're passionate about creating innovative digital experiences that help businesses succeed in the mobile-first world.
               </p>
@@ -78,7 +78,7 @@ export function AboutSection() {
                       <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-enhanced text-sm leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -91,15 +91,15 @@ export function AboutSection() {
             <div className="grid grid-cols-3 gap-6 pt-6">
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">50+</div>
-                <div className="text-sm text-muted-foreground">Mobile Apps</div>
+                <div className="text-sm text-muted-enhanced">Mobile Apps</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">30+</div>
-                <div className="text-sm text-muted-foreground">Web Projects</div>
+                <div className="text-sm text-muted-enhanced">Web Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">100%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
+                <div className="text-sm text-muted-enhanced">Success Rate</div>
               </div>
             </div>
           </div>

@@ -97,7 +97,7 @@ export function ContactSection() {
             Let's Build{" "}
             <span className="gradient-text">Together</span>
           </h2>
-          <p className="text-responsive text-muted-foreground max-w-3xl">
+          <p className="text-responsive text-description max-w-3xl">
             Ready to start your mobile app or web development project? Let's discuss how we can bring your ideas to life with our expertise in mobile apps, web development, and AI solutions.
           </p>
         </div>
@@ -107,7 +107,7 @@ export function ContactSection() {
           <div className="space-y-8 animate-slide-up">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Our Services</h3>
-              <p className="text-muted-foreground">
+              <p className="text-description">
                 Choose from our core services or let us know about your specific requirements.
               </p>
             </div>
@@ -123,7 +123,7 @@ export function ContactSection() {
                       <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h4>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-muted-enhanced text-sm">
                         {service.description}
                       </p>
                     </div>
@@ -147,7 +147,7 @@ export function ContactSection() {
                         </h4>
                         <div className="space-y-1">
                           {info.details.map((detail, detailIndex) => (
-                            <p key={detailIndex} className="text-muted-foreground text-sm">
+                            <p key={detailIndex} className="text-muted-enhanced text-sm">
                               {detail}
                             </p>
                           ))}
@@ -165,7 +165,7 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Start Your Project</h3>
-                <p className="text-muted-foreground">
+                <p className="text-description">
                   Tell us about your project and we'll get back to you within 24 hours.
                 </p>
               </div>

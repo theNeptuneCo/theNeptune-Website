@@ -48,7 +48,7 @@ export function ServicesSection() {
             What We{" "}
             <span className="gradient-text">Specialize In</span>
           </h2>
-          <p className="text-responsive text-muted-foreground max-w-3xl font-body">
+          <p className="text-responsive text-description max-w-2xl">
             We focus on three core areas: mobile app development, web development, and Generative AI solutions. 
             Each service is designed to deliver exceptional results and drive your business forward.
           </p>
@@ -76,14 +76,14 @@ export function ServicesSection() {
               </CardHeader>
               
               <CardContent className="relative space-y-6 text-center">
-                <CardDescription className="text-base leading-relaxed font-body">
+                <CardDescription className="text-base leading-relaxed text-description">
                   {service.description}
                 </CardDescription>
                 
                 {/* Features list */}
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-muted-foreground font-sans">
+                    <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-muted-enhanced font-sans">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
                       {feature}
                     </div>
@@ -107,7 +107,7 @@ export function ServicesSection() {
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium font-sans">
             Ready to build something amazing?
           </div>
-          <p className="mt-4 text-muted-foreground font-body">
+          <p className="mt-4 text-muted-enhanced">
             Let's discuss your project and create the perfect solution for your business.
           </p>
         </div>

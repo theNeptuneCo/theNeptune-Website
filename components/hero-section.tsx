@@ -26,7 +26,7 @@ export function HeroSection() {
                 Taming the {" "}
                 <span className="gradient-text">Digital Tides</span>
               </h1>
-              <p className="text-xl md:text-1xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
+              <p className="text-xl md:text-1xl text-description max-w-3xl mx-auto leading-relaxed">
                 We specialize in mobile app development, web development, and Generative AI solutions. 
                 Creating innovative digital experiences that drive business growth.
               </p>
