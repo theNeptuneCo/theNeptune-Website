@@ -161,14 +161,14 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-up">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Start Your Project</h3>
-                <p className="text-description">
-                  Tell us about your project and we'll get back to you within 24 hours.
-                </p>
-              </div>
+                      <div className="animate-slide-up">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-4 text-center">
+                  <h3 className="text-2xl font-bold">Start Your Project</h3>
+                  <p className="text-description">
+                    Tell us about your project and we'll get back to you within 24 hours.
+                  </p>
+                </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
